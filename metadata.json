@@ -1,0 +1,6 @@
+{
+  "name": "agentry",
+  "description": "agentry — a capability graph that lets a fleet of AI agents grow themselves. Live on a free Hugging Face Space.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

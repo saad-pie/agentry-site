@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — agentry</title>
+    <meta name="description" content="Privacy policy for agentry — what data the system handles today, and how that will change as it grows." />
+    <meta property="og:title" content="Privacy Policy — agentry" />
+    <meta property="og:description" content="Privacy policy for agentry — what data the system handles today, and how that will change as it grows." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='5' cy='6' r='3'/%3E%3Ccircle cx='19' cy='6' r='3'/%3E%3Ccircle cx='12' cy='18' r='3'/%3E%3Cpath d='M7.5 7.5l3 8'/%3E%3Cpath d='M16.5 7.5l-3 8'/%3E%3Cpath d='M8 6h8'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        --bg: #fafafa;
+        --surface: #ffffff;
+        --surface-subtle: #f4f4f5;
+        --border: #e4e4e7;
+        --border-hover: #d4d4d8;
+        --text: #09090b;
+        --text-muted: #52525b;
+        --text-faint: #71717a;
+        --accent: #059669;
+        --accent-bg: #ecfdf5;
+        --accent-border: #a7f3d0;
+        --code-bg: #11141a;
+        --code-text: #e6edf3;
+        --mono-font: ui-monospace, 'JetBrains Mono', 'IBM Plex Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+        --sans-font: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #090d12;
+          --surface: #111620;
+          --surface-subtle: #171e2c;
+          --border: #202b3c;
+          --border-hover: #2d3b52;
+          --text: #f1f5f9;
+          --text-muted: #94a3b8;
+          --text-faint: #64748b;
+          --accent: #10b981;
+          --accent-bg: rgba(16, 185, 129, 0.1);
+          --accent-border: rgba(16, 185, 129, 0.25);
+          --code-bg: #070a0e;
+          --code-text: #e2e8f0;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: var(--sans-font);
+        color: var(--text);
+        background-color: var(--bg);
+        line-height: 1.65;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      p a, li a {
+        border-bottom: 1px solid var(--border-hover);
+        transition: color 0.15s ease, border-color 0.15s ease;
+      }
+
+      p a:hover, li a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      code, pre, .mono {
+        font-family: var(--mono-font);
+      }
+
+      .container {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        width: 100%;
+      }
+
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 90%, transparent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.5rem;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--mono-font);
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+
+      .logo-icon {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        font-size: 0.875rem;
+      }
+
+      .nav-links a {
+        color: var(--text-muted);
+        transition: color 0.15s ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--text);
+      }
+
+      /* Page Title Header */
+      .page-header {
+        padding: 4rem 0 2.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 5vw, 3.25rem);
+        line-height: 1.15;
+        font-weight: 750;
+        letter-spacing: -0.035em;
+        color: var(--text);
+        margin-bottom: 0.75rem;
+      }
+
+      .meta-line {
+        font-family: var(--mono-font);
+        font-size: 0.825rem;
+        color: var(--text-faint);
+      }
+
+      /* Section structure */
+      section {
+        padding: 2.75rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section-tag {
+        font-family: var(--mono-font);
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        display: block;
+      }
+
+      h2 {
+        font-size: clamp(1.35rem, 3vw, 1.65rem);
+        line-height: 1.3;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin-bottom: 1rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Callout box */
+      .callout {
+        margin-top: 1rem;
+        background: var(--code-bg);
+        color: var(--code-text);
+        padding: 0.85rem 1.15rem;
+        border-radius: 6px;
+        font-family: var(--mono-font);
+        font-size: 0.825rem;
+        line-height: 1.6;
+        overflow-x: auto;
+      }
+
+      /* Unordered list */
+      ul.clean-list {
+        list-style: none;
+        margin-top: 0.5rem;
+      }
+
+      ul.clean-list li {
+        font-size: 1rem;
+        color: var(--text-muted);
+        padding: 0.35rem 0;
+        display: flex;
+        align-items: baseline;
+        gap: 0.6rem;
+      }
+
+      ul.clean-list li::before {
+        content: "·";
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      /* Footer */
+      footer {
+        padding: 3.5rem 0 3rem;
+        font-size: 0.85rem;
+        color: var(--text-faint);
+      }
+
+      .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .footer-brand {
+        font-family: var(--mono-font);
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .footer-links a {
+        color: var(--text-muted);
+        transition: color 0.15s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--text);
+      }
+
+      .footer-manifesto {
+        font-family: var(--mono-font);
+        font-size: 0.775rem;
+        color: var(--text-faint);
+        margin-bottom: 0.6rem;
+      }
+
+      .footer-copy {
+        font-size: 0.775rem;
+        color: var(--text-faint);
+      }
+
+      @media (max-width: 640px) {
+        .page-header {
+          padding: 3rem 0 2rem;
+        }
+
+        .nav-links {
+          gap: 0.85rem;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sticky header -->
+    <header>
+      <div class="container">
+        <nav class="nav-inner" aria-label="Main Navigation">
+          <a href="/" class="logo" aria-label="agentry home">
+            <span class="logo-icon">⬡</span>
+            <span>agentry</span>
+          </a>
+          <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/privacy.html" class="active">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="https://github.com/saad-pie/agentry" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Title -->
+      <div class="page-header">
+        <div class="container">
+          <h1>Privacy Policy</h1>
+          <div class="meta-line">Last updated: 2026-10-11 · Version 1</div>
+        </div>
+      </div>
+
+      <!-- 01 / SCOPE -->
+      <section>
+        <div class="container">
+          <span class="section-tag">01 / SCOPE</span>
+          <h2>Scope and System Identity</h2>
+          <p>
+            agentry is a meta-system for AI agents that maintains a capability graph, runs discovery over public sources (GitHub, the web), and proposes capability additions to a human operator. It is currently self-hosted and operated by a single individual. This policy describes what data agentry handles today, and how that will change as the system grows.
+          </p>
+        </div>
+      </section>
+
+      <!-- 02 / WHAT WE COLLECT -->
+      <section>
+        <div class="container">
+          <span class="section-tag">02 / WHAT WE COLLECT</span>
+          <h2>Data Collection</h2>
+          <p>
+            Today: nothing from visitors to this website. No analytics, no cookies, no tracking pixels, no third-party scripts. The site is a static HTML page. For the operator of an agentry instance, agentry records operational metadata — capability gaps, discovery candidates, approval decisions — in an append-only log on the operator's own infrastructure. This log does not contain personal data of any third party.
+          </p>
+          <div class="callout">
+            categories: gaps, discoveries, proposals, approvals, capability_graph_nodes
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 / GOOGLE ACCOUNT ACCESS -->
+      <section>
+        <div class="container">
+          <span class="section-tag">03 / GOOGLE ACCOUNT ACCESS</span>
+          <h2>Google Account Access</h2>
+          <p>
+            agentry's Gmail integration uses Google OAuth 2.0 with the gmail.send scope only. This scope allows agentry to send email notifications on behalf of the operator (for example, when a capability proposal is ready for approval). It does not permit reading, modifying, or deleting any email. It does not grant access to any other Google service.
+          </p>
+          <div class="callout">
+            scope: https://www.googleapis.com/auth/gmail.send
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 / HOW GOOGLE USER DATA IS USED -->
+      <section>
+        <div class="container">
+          <span class="section-tag">04 / HOW GOOGLE USER DATA IS USED</span>
+          <h2>Use of Google User Data</h2>
+          <p>
+            Google user data is used exclusively to send notification emails from agentry to the operator's own address. The OAuth refresh token issued by Google is stored on the operator's own infrastructure and is never transmitted to any third party. No Google user data is processed by any external service, LLM, or analytics provider.
+          </p>
+        </div>
+      </section>
+
+      <!-- 05 / WHAT WE DO NOT DO -->
+      <section>
+        <div class="container">
+          <span class="section-tag">05 / WHAT WE DO NOT DO</span>
+          <h2>Practices We Do Not Engage In</h2>
+          <ul class="clean-list">
+            <li>We do not sell data.</li>
+            <li>We do not share data with advertisers.</li>
+            <li>We do not use cookies or any client-side tracking.</li>
+            <li>We do not perform server-side logging of visitor IP addresses or user agents for the site.</li>
+            <li>We do not transmit Google user data outside the operator's own infrastructure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 06 / THIRD-PARTY SERVICES -->
+      <section>
+        <div class="container">
+          <span class="section-tag">06 / THIRD-PARTY SERVICES</span>
+          <h2>Third-Party Services</h2>
+          <p>
+            agentry integrates with third-party services that the operator configures, currently including GitHub (for repository search), a self-hosted SearXNG instance (for open-web search), the Hugging Face platform (for hosting), and Google Gmail (for notifications). Use of those services by third parties is governed by their own policies. agentry does not share any operator data with these services beyond what is necessary for each integration to function.
+          </p>
+        </div>
+      </section>
+
+      <!-- 07 / WHAT CHANGES AS AGENTRY GROWS -->
+      <section>
+        <div class="container">
+          <span class="section-tag">07 / WHAT CHANGES AS AGENTRY GROWS</span>
+          <h2>Trajectory and Growth</h2>
+          <p>
+            agentry is designed to support multiple agents, multiple capabilities, and eventually multiple operators. When a change to the system would introduce a new category of data collection, the change will be reflected in this policy — with a bumped version number and a new "Last updated" date — before that collection begins. Users who wish to be informed of changes can watch the project at <a href="https://github.com/saad-pie/agentry" target="_blank" rel="noopener noreferrer">github.com/saad-pie/agentry</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- 08 / DATA RETENTION AND DELETION -->
+      <section>
+        <div class="container">
+          <span class="section-tag">08 / DATA RETENTION AND DELETION</span>
+          <h2>Data Retention and Deletion</h2>
+          <p>
+            Because agentry collects no third-party data, there is nothing to delete on request. Operators who wish to revoke agentry's access to a Google account can do so at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>. To request removal of data from an agentry instance you operate, contact the address in section 09.
+          </p>
+        </div>
+      </section>
+
+      <!-- 09 / CONTACT -->
+      <section>
+        <div class="container">
+          <span class="section-tag">09 / CONTACT</span>
+          <h2>Contact and Security Disclosures</h2>
+          <p>
+            Questions, corrections, or deletion requests can be directed to <a href="mailto:saadabdulrehman2010@gmail.com">saadabdulrehman2010@gmail.com</a> or opened as an issue at <a href="https://github.com/saad-pie/agentry" target="_blank" rel="noopener noreferrer">github.com/saad-pie/agentry</a>. For security disclosures, please use the email address and prefix the subject with [security].
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">agentry · built by saad-pie</div>
+          <div class="footer-links">
+            <a href="https://github.com/saad-pie/agentry" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="mailto:saadabdulrehman2010@gmail.com">Contact</a>
+          </div>
+        </div>
+        <div class="footer-manifesto">
+          No cookies. No analytics. No tracking. Just a capability graph.
+        </div>
+        <div class="footer-copy">
+          © 2026 saad-pie. MIT licensed.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
